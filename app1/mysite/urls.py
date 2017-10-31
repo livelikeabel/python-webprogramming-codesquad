@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^lotto/$', views.index, name='lotto'),
     url(r'^$', views.index, name='index'),
-    url(r'^lotto/new/$', views.post, name = "now_lotto"),
+    url(r'^lotto/new/$', views.post, name = "new_lotto"),
+    url(r'^lotto/(?P<lottokey>[0-9]+)/detail/$', views.detail, name='detail'),
 ]
